@@ -1,4 +1,4 @@
-FROM php:8.1-fpm-alpine
+FROM php:8.2-fpm-alpine
 
 LABEL maintainer="Jelle Deneweth <jelle@codeheroes.be>"
 
@@ -39,4 +39,4 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
     zip
 
 # Composer
-COPY --from=composer:2.4.4 /usr/bin/composer /usr/local/bin/composer
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
