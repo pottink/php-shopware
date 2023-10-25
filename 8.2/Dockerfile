@@ -6,6 +6,7 @@ RUN apk add -U --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge
     acl \
     autoconf \
     bash \
+    chromium \
     curl \
     git \
     jq \
@@ -35,6 +36,7 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
     pdo_mysql \
     redis \
     soap \
+    sockets \
     xdebug \
     zip
 
