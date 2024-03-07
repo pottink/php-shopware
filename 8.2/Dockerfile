@@ -31,6 +31,7 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
     exif \
     gd \
     intl \
+    mongodb \
     opcache \
     pcntl \
     pdo_mysql \
@@ -42,3 +43,6 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
 
 # Composer
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
+
+EXPOSE 9000/tcp
+EXPOSE 9003/tcp
